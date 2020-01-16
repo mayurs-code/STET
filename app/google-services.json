@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "574384002123",
+    "firebase_url": "https://stet-a37a6.firebaseio.com",
+    "project_id": "stet-a37a6",
+    "storage_bucket": "stet-a37a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574384002123:android:3cf24bf276d8e5a7d929ce",
+        "android_client_info": {
+          "package_name": "com.sih.stet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574384002123-hp365gme7quse7dckrgjacvit44qe32b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sih.stet",
+            "certificate_hash": "f27ac12a7c2890644d87f36cfc21f1fc9058bfd0"
+          }
+        },
+        {
+          "client_id": "574384002123-mkpkorhgs1tsbtg1ft9vfrkpihdm4d9f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoRTZ657r0EDp8dAJLANdKq1mIewAuU-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574384002123-mkpkorhgs1tsbtg1ft9vfrkpihdm4d9f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

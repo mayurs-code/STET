@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_menu"
+                    android:padding="16dp"
+                    android:onClick="openDrawer"
+                    android:scaleY=".7"
+                    android:scaleX=".7"
+                    android:tint="@color/themePrimary"
+                    android:contentDescription="openDrawer"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:padding="16dp"
+
+                    android:text="@string/heading"
+                    android:textColor="@color/dark1"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:text="@string/login"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:layout_margin="4dp"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        app:chipBackgroundColor="@color/themePrimary" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:text="@string/register"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:layout_margin="4dp"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        app:chipBackgroundColor="@color/themePrimary" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:padding="16dp"
+                    android:background="@color/light1"
+                    android:textColor="@color/dark1"
+                    android:text="@string/notice" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/noticeRecyclerView"
+                    android:layout_width="match_parent"
+
+                    android:background="@color/white"
+                    android:layout_height="200dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:background="@color/light1"
+                    android:textColor="@color/dark1"
+                    android:text="@string/about_stet" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:padding="16dp"
+                    android:justificationMode="inter_word"
+                    android:text="@string/about_stet_desc"
+                    android:textColor="@color/dark3" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        app:headerLayout="@layout/side_navigation_header"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

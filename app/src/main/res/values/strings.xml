@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">STET</string>
+    <string name="fullHeading">Sikkhim Teacher Eligibility Test</string>
+    <string name="heading">STET PORTAL</string>
+    <string name="notice">Notice</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="quick_links"><![CDATA[Quick Links >]]></string>
+    <string name="about_stet">About STET</string>
+    <string name="about_stet_desc">STET Sikkim Exam is conducted by the Human Resource Development Department of Sikkim. It is conducted once a year. A person who will qualify STET may also appear again for improving his/her score in the following years. All candidates who will pass the STET will be awarded certificate. The validity of the certificate will be till he/she crosses the employability age as per the state government norms. However, it does not cover the special exemption of higher age given to the temporary in-service employees. A person who will score 60% or more in TET will be considered TET pass. 5 % relaxation of marks is applicable to SC/ST, Central &amp; State OBC candidates.</string>
+</resources>
