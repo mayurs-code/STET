@@ -8,4 +8,29 @@
     <string name="quick_links"><![CDATA[Quick Links >]]></string>
     <string name="about_stet">About STET</string>
     <string name="about_stet_desc">STET Sikkim Exam is conducted by the Human Resource Development Department of Sikkim. It is conducted once a year. A person who will qualify STET may also appear again for improving his/her score in the following years. All candidates who will pass the STET will be awarded certificate. The validity of the certificate will be till he/she crosses the employability age as per the state government norms. However, it does not cover the special exemption of higher age given to the temporary in-service employees. A person who will score 60% or more in TET will be considered TET pass. 5 % relaxation of marks is applicable to SC/ST, Central &amp; State OBC candidates.</string>
+    <string name="admit_release">Download Admit Card</string>
+    <string name="fill_form">Fill Application Form</string>
+    <string name="result">Result</string>
+    <string name="application_number">Application Number</string>
+    <string name="user_name">User Name</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="first_name">*First Name</string>
+    <string name="last_name">*Last Name</string>
+    <string name="father_s_name">*Father\'s Name</string>
+    <string name="mother_s_name">Mother\'s Name</string>
+    <string name="Lisence">(i) The information submitted above is true and correct to the best of my Knowledge.I understand that ,In case any Information proves to be false or incorrect or incomplete,my candidature will be cancelled .   (ii) I understand that qualifying STET does not confer any right to claim for the job of teacher whether regular or adhoc. It is one among the eligibility criteria for applying for teaching job.  iii) I didnot round-off the percentage on my Educational Qualification (as in S.No.10 in this form),and I entered as it is with decimals(2 digits). If I ignore this ,and round off then my candidature will be automatically rejected by the processing system,ONLY ELIGIBLE CANDIDATES WILL RECIEVE THE ADMIT CARD.  (iv) I completed my Teaching Degree/Diploma (B.Ed/D.El.Ed...) as a regular Student by attending classes in an NCTE approved Institution or through NCTE approved Distance mode.</string>
+    <string-array name="languages">
+        <item>Hindi</item>
+        <item>Nepali</item>
+        <item>Bhutia</item>
+        <item>Lepcha</item>
+        <item>Limboo</item>
+    </string-array>
+    <string-array name="paper_type">
+        <item>Paper-1(Primary)</item>
+        <item>Paper-2(Secondary)</item>
+    </string-array>
 </resources>

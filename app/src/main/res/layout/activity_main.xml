@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".UI.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,6 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
+
             android:layout_height="match_parent">
 
             <LinearLayout
@@ -49,35 +50,99 @@
 
             </LinearLayout>
 
-            <HorizontalScrollView
+            <LinearLayout
+                android:padding="8dp"
                 android:layout_width="match_parent"
+                android:orientation="vertical"
                 android:layout_height="wrap_content">
 
-                <LinearLayout
+                <HorizontalScrollView
+
                     android:layout_width="match_parent"
-                    android:orientation="horizontal"
                     android:layout_height="wrap_content">
 
+                    <LinearLayout
+                        android:id="@+id/loginLayout"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
 
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:text="@string/login"
-                        android:fontFamily="@font/open_sans_semibold"
-                        android:layout_margin="4dp"
-                        android:textColor="@color/white"
-                        android:layout_height="wrap_content"
-                        app:chipBackgroundColor="@color/themePrimary" />
 
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:text="@string/register"
-                        android:fontFamily="@font/open_sans_semibold"
-                        android:layout_margin="4dp"
-                        android:textColor="@color/white"
-                        android:layout_height="wrap_content"
-                        app:chipBackgroundColor="@color/themePrimary" />
-                </LinearLayout>
-            </HorizontalScrollView>
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:text="@string/login"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:onClick="loginActivity"
+                            android:layout_margin="4dp"
+                            android:textColor="@color/white"
+                            android:layout_height="wrap_content"
+                            app:chipBackgroundColor="@color/themeGreen" />
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:onClick="registerActivity"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:text="@string/register"
+                            android:textColor="@color/white"
+                            app:chipBackgroundColor="@color/themeGreen" />
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+
+                        <com.google.android.material.chip.Chip
+                            android:enabled="false"
+                            android:id="@+id/admitCardChip"
+                            android:layout_width="wrap_content"
+                            android:text="@string/admit_release"
+                            android:onClick="admitCardActivity"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:layout_margin="4dp"
+                            android:textColor="@color/white"
+                            android:layout_height="wrap_content"
+                            app:chipBackgroundColor="@color/dark3" />
+
+                        <com.google.android.material.chip.Chip
+                            android:enabled="false"
+                            android:id="@+id/applicationFormChip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="fillFormActivity"
+                            android:layout_margin="4dp"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:text="@string/fill_form"
+                            android:textColor="@color/white"
+                            app:chipBackgroundColor="@color/dark3" />
+
+                        <com.google.android.material.chip.Chip
+                            android:enabled="false"
+                            android:id="@+id/resultChip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:onClick="resultActivity"
+                            android:fontFamily="@font/open_sans_semibold"
+                            android:text="@string/result"
+                            android:textColor="@color/white"
+                            app:chipBackgroundColor="@color/dark3" />
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -116,6 +181,7 @@
                     android:text="@string/about_stet" />
 
                 <TextView
+                    android:id="@+id/aboutText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/open_sans"

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/light1"
+    android:layout_height="match_parent"
+    tools:context=".UI.LoginActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/admit_release"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textColor="@color/dark1"
+                android:padding="32dp"
+                android:textSize="32sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_margin="16dp"
+                app:boxStrokeColor="@color/dark3"
+                android:hint="@string/application_number"
+                android:textColorHint="@color/dark3"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeWidth="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/applicationNumberAdmitCardField"
+                    android:textColor="@color/dark1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_margin="16dp"
+                app:boxStrokeColor="@color/dark3"
+                android:hint="@string/fui_password_hint"
+                android:textColorHint="@color/dark3"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeWidth="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordAdmitCardField"
+                    android:textColor="@color/dark1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:padding="16dp"
+                android:layout_marginBottom="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:text="@string/admit_release"
+                    android:onClick="loginUser"
+                    app:cornerRadius="4dp"
+                    android:backgroundTint="@color/themePrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

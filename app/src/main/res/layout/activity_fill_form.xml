@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".UI.FillFormActivity">
+
+    <LinearLayout
+        android:background="@color/light1"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="16dp"
+            android:textColor="@color/dark1"
+            android:background="@color/white"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="18sp"
+            android:text="@string/fill_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:padding="16dp"
+                    android:textColor="@color/dark2"
+                    android:fontFamily="@font/open_sans_semibold"
+
+                    android:text="@string/personal_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:padding="16dp"
+                    android:textSize="10dp"
+                    android:textColor="@color/themeRed"
+                    android:fontFamily="@font/open_sans"
+
+                    android:text="* Enter Details As they are in your aadhar card stored in digilocker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_margin="8dp"
+                    app:boxStrokeColor="@color/dark3"
+                    android:hint="@string/first_name"
+                    android:textColorHint="@color/dark3"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/firstNameFormField"
+                        android:textColor="@color/dark1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_margin="8dp"
+                    app:boxStrokeColor="@color/dark3"
+                    android:hint="@string/last_name"
+                    android:textColorHint="@color/dark3"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/lastNameFormField"
+                        android:textColor="@color/dark1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_margin="8dp"
+                    app:boxStrokeColor="@color/dark3"
+                    android:hint="@string/father_s_name"
+                    android:textColorHint="@color/dark3"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fathersNameFormField"
+                        android:textColor="@color/dark1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_margin="8dp"
+                    app:boxStrokeColor="@color/dark3"
+                    android:hint="@string/mother_s_name"
+                    android:textColorHint="@color/dark3"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mothersNameFormField"
+                        android:textColor="@color/dark1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:padding="20dp"
+                    android:text="Select Date of Birth"
+                    android:textColor="@color/dark3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <DatePicker
+                    android:id="@+id/datePickerForm"
+                    android:nestedScrollingEnabled="false"
+                    android:datePickerMode="spinner"
+                    android:layout_gravity="center"
+                    android:maxDate="12/31/2000"
+                    android:background="@color/colorAccent"
+                    android:calendarViewShown="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RadioGroup
+                    android:padding="16dp"
+                    android:id="@+id/genderRadio"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:checkedButton="@id/maleRadio"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/maleRadio"
+                        android:text="Male"
+                        android:textColor="@color/dark1"
+                        app:useMaterialThemeColors="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/femaleRadio"
+                        android:text="Female"
+                        android:textColor="@color/dark1"
+                        app:useMaterialThemeColors="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:padding="16dp"
+                    android:id="@+id/casteRadio"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:checkedButton="@id/generalRadio"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/generalRadio"
+                        android:text="General"
+                        android:textColor="@color/dark1"
+                        app:useMaterialThemeColors="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/scRadio"
+                        android:text="SC"
+                        android:textColor="@color/dark1"
+                        app:useMaterialThemeColors="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/stRadio"
+                        android:text="ST"
+                        android:textColor="@color/dark1"
+                        app:useMaterialThemeColors="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/obcRadio"
+                        android:text="OBC"
+                        android:textColor="@color/dark1"
+                        app:useMaterialThemeColors="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_margin="8dp"
+                    app:boxStrokeColor="@color/dark3"
+                    android:hint="Address"
+                    android:textColorHint="@color/dark3"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addressFormField"
+                        android:textColor="@color/dark1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_margin="8dp"
+                    app:boxStrokeColor="@color/dark3"
+                    android:hint="City"
+                    android:textColorHint="@color/dark3"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cityFormField"
+                        android:textColor="@color/dark1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_margin="8dp"
+                    app:boxStrokeColor="@color/dark3"
+                    android:hint="State"
+                    android:textColorHint="@color/dark3"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/stateFormField"
+                        android:textColor="@color/dark1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_margin="8dp"
+                    app:boxStrokeColor="@color/dark3"
+                    android:hint="Pincode"
+                    android:textColorHint="@color/dark3"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pincodeFormField"
+                        android:textColor="@color/dark1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_margin="8dp"
+                    app:boxStrokeColor="@color/dark3"
+                    android:hint="Mobile no."
+                    android:textColorHint="@color/dark3"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mobileFormField"
+                        android:textColor="@color/dark1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_margin="8dp"
+                    app:boxStrokeColor="@color/dark3"
+                    android:hint="Aadhar no."
+                    android:textColorHint="@color/dark3"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/aadharFormField"
+                        android:textColor="@color/dark1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:padding="16dp"
+                    android:textColor="@color/dark2"
+                    android:fontFamily="@font/open_sans_semibold"
+
+                    android:text="Paper Details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:padding="16dp"
+                    android:textColor="@color/dark1"
+                    android:fontFamily="@font/open_sans"
+
+                    android:text="Select Paper Language"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:drawSelectorOnTop="true"
+                    android:spinnerMode="dropdown"
+                    android:padding="16dp"
+                    android:dropDownSelector="@color/white"
+                    android:backgroundTint="@color/themeGreen"
+                    android:id="@+id/paperLanguageSpinnerForm"
+                    android:background="@color/dark2"
+                    android:entries="@array/languages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:padding="16dp"
+                    android:textColor="@color/dark1"
+                    android:fontFamily="@font/open_sans"
+
+                    android:text="Select Paper Type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Spinner
+                    android:drawSelectorOnTop="true"
+                    android:spinnerMode="dropdown"
+                    android:padding="16dp"
+                    android:dropDownSelector="@color/white"
+                    android:backgroundTint="@color/themeGreen"
+                    android:id="@+id/paperTypeSpinnerForm"
+                    android:background="@color/dark2"
+                    android:entries="@array/paper_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <RadioGroup
+                    android:padding="16dp"
+                    android:id="@+id/teacherCategoryRadio"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:checkedButton="@id/cat1Radio"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/dark1"
+                        android:padding="8dp"
+                        android:text="CATEGORY OF TEACHER FOR STET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/cat1Radio"
+                        android:text="Primary Teacher for Classes I to V "
+                        android:textColor="@color/dark1"
+                        app:useMaterialThemeColors="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/cat2Radio"
+                        android:text="GT Arts for classes VI to VIII "
+                        android:textColor="@color/dark1"
+                        app:useMaterialThemeColors="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/cat3Radio"
+                        android:text="GT Science/Maths for classes VI to VIII "
+                        android:textColor="@color/dark1"
+                        app:useMaterialThemeColors="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RadioGroup>
+                <RadioGroup
+                    android:padding="16dp"
+                    android:id="@+id/imparedCategoryRadio"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:checkedButton="@id/imparedNoRadio"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/dark1"
+                        android:padding="8dp"
+                        android:text="Are you orthopedically/Locomotor impaired?"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/imparedYesRadio"
+                        android:text="YES"
+                        android:textColor="@color/dark1"
+                        app:useMaterialThemeColors="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/imparedNoRadio"
+                        android:text="NO"
+                        android:textColor="@color/dark1"
+                        app:useMaterialThemeColors="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RadioGroup>
+                <RadioGroup
+                    android:padding="16dp"
+                    android:id="@+id/appearedBeforeRadio"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:checkedButton="@id/appearedNoRadio"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/dark1"
+                        android:padding="8dp"
+                        android:text="Have you appeared for STET earlier ?"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/appearedYesRadio"
+                        android:text="YES"
+                        android:textColor="@color/dark1"
+                        app:useMaterialThemeColors="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/appearedNoRadio"
+                        android:text="NO"
+                        android:textColor="@color/dark1"
+                        app:useMaterialThemeColors="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:padding="16dp"
+                    android:textSize="10sp"
+                    android:justificationMode="inter_word"
+
+                    android:textColor="@color/dark3"
+                    android:text="@string/Lisence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:targetApi="o" />
+
+                <LinearLayout
+                    android:padding="8dp"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="end"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.button.MaterialButton
+                        android:padding="16dp"
+                        android:layout_gravity="end"
+                        android:layout_margin="8dp"
+                        android:backgroundTint="@color/themeGreen"
+                        android:enabled="false"
+                        android:id="@+id/nextFormButton"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:text="Please Fill All details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:padding="16dp"
+                        android:layout_gravity="end"
+                        android:textColor="@color/white"
+                        android:onClick="saveDetails"
+                        android:layout_margin="8dp"
+                        android:backgroundTint="@color/themePrimary"
+                        android:id="@+id/saveFormButton"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:text="Save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
