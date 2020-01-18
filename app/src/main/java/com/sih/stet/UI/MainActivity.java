@@ -3,10 +3,14 @@ package com.sih.stet.UI;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -25,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     Chip admitCardChip;
     Chip applicationFormChip;
     Chip resultChip;
+    SharedPreferences preferences;
+    String applicationNumber;
 
     FirebaseFirestore db=FirebaseFirestore.getInstance();
 
@@ -37,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void members() {
+        preferences = getPreferences(Context.MODE_PRIVATE);
+
         loginLayout=findViewById(R.id.loginLayout);
         admitCardChip=findViewById(R.id.admitCardChip);
         applicationFormChip=findViewById(R.id.applicationFormChip);
@@ -49,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void statusChecker() {
+        Toast.makeText(this, "Welcome"+preferences.getString("applicationNumber","---"), Toast.LENGTH_SHORT).show();
+        if (!preferences.getString("applicationNumber","---").equals("---")){
+            applicationNumber=preferences.getString("applicationNumber","---");
+            loggedIn=true;
+            loginLayout.setVisibility(View.GONE);
+
+        }
         db.document(values.viewResultStatus()).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
